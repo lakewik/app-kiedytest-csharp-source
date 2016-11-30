@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:p1="http://schemas.android.com/apk/res/android"
+    p1:minWidth="25px"
+    p1:minHeight="25px"
+    p1:layout_width="match_parent"
+    p1:layout_height="match_parent"
+    p1:id="@+id/scrollView1">
+    <LinearLayout
+        p1:orientation="vertical"
+        p1:layout_width="match_parent"
+        p1:layout_height="match_parent"
+        p1:id="@+id/linearLayout1">
+        <TextView
+            p1:textAppearance="?android:attr/textAppearanceMedium"
+            p1:layout_width="match_parent"
+            p1:layout_height="wrap_content"
+            p1:id="@+id/textView8" />
+        <TextView
+            p1:text="   Ustawienia powiadomień"
+            p1:layout_width="match_parent"
+            p1:layout_height="wrap_content"
+            p1:id="@+id/textView1"
+            p1:textAppearance="?android:attr/textAppearanceLarge" />
+        <CheckBox
+            p1:text="Automatycznie powiadamiaj o zapowiedzianych testach wiadomości"
+            p1:layout_width="377.5dp"
+            p1:layout_height="48.0dp"
+            p1:id="@+id/checkBox2" />
+        <TextView
+            p1:text="   Ustawienia konta"
+            p1:layout_width="match_parent"
+            p1:layout_height="wrap_content"
+            p1:id="@+id/textView1"
+            p1:textAppearance="?android:attr/textAppearanceLarge" />
+        <TextView
+            p1:textAppearance="?android:attr/textAppearanceLarge"
+            p1:layout_width="match_parent"
+            p1:layout_height="11.0dp"
+            p1:id="@+id/textView3" />
+        <TextView
+            p1:text="    Zalogowano jako:"
+            p1:textAppearance="?android:attr/textAppearanceMedium"
+            p1:layout_width="match_parent"
+            p1:layout_height="wrap_content"
+            p1:id="@+id/textView2" />
+        <TextView
+            p1:textAppearance="?android:attr/textAppearanceSmall"
+            p1:layout_width="match_parent"
+            p1:layout_height="wrap_content"
+            p1:id="@+id/textView4" />
+        <Button
+            p1:text="Wyloguj"
+            p1:layout_width="match_parent"
+            p1:layout_height="49.0dp"
+            p1:id="@+id/button1" />
+        <TextView
+            p1:textAppearance="?android:attr/textAppearanceSmall"
+            p1:layout_width="match_parent"
+            p1:layout_height="wrap_content"
+            p1:id="@+id/textView5" />
+        <TextView
+            p1:text="   O programie"
+            p1:layout_width="match_parent"
+            p1:layout_height="wrap_content"
+            p1:id="@+id/textView1"
+            p1:textAppearance="?android:attr/textAppearanceLarge" />
+        <TextView
+            p1:textAppearance="?android:attr/textAppearanceSmall"
+            p1:layout_width="match_parent"
+            p1:layout_height="wrap_content"
+            p1:id="@+id/textView6" />
+        <Button
+            p1:text="Zgłoś propozycje lub błąd"
+            p1:layout_width="match_parent"
+            p1:layout_height="58.0dp"
+            p1:id="@+id/button3"
+            p1:background="#608FD1"
+            p1:textSize="17dp" />
+        <TextView
+            p1:textAppearance="?android:attr/textAppearanceSmall"
+            p1:layout_width="match_parent"
+            p1:layout_height="9.0dp"
+            p1:id="@+id/textView7" />
+        <Button
+            p1:text="Informacje o programie"
+            p1:layout_width="match_parent"
+            p1:layout_height="58.0dp"
+            p1:id="@+id/button4"
+            p1:background="#60C4D1"
+            p1:textSize="17dp" />
+        <TextView
+            p1:textAppearance="?android:attr/textAppearanceSmall"
+            p1:layout_width="match_parent"
+            p1:layout_height="10.0dp"
+            p1:id="@+id/textView5" />
+        <TextView
+            p1:text="Zaawansowane"
+            p1:layout_width="match_parent"
+            p1:layout_height="wrap_content"
+            p1:id="@+id/textView1"
+            p1:textAppearance="?android:attr/textAppearanceLarge"
+            p1:gravity="center" />
+        <TextView
+            p1:textAppearance="?android:attr/textAppearanceSmall"
+            p1:layout_width="match_parent"
+            p1:layout_height="10.0dp"
+            p1:id="@+id/textView5" />
+        <TextView
+            p1:text="  Czas oczekiwania na odpowiedź:"
+            p1:textAppearance="?android:attr/textAppearanceMedium"
+            p1:layout_width="match_parent"
+            p1:layout_height="wrap_content"
+            p1:id="@+id/textView2" />
+        <EditText
+            p1:layout_width="match_parent"
+            p1:layout_height="wrap_content"
+            p1:id="@+id/editText1" />
+        <CheckBox
+            p1:text="Wyłącz HeartBeat"
+            p1:layout_width="365.0dp"
+            p1:layout_height="wrap_content"
+            p1:id="@+id/checkBox1" />
+        <TextView
+            p1:textAppearance="?android:attr/textAppearanceSmall"
+            p1:layout_width="match_parent"
+            p1:layout_height="10.0dp"
+            p1:id="@+id/textView5" />
+        <Button
+            p1:text="Zapisz ustawienia"
+            p1:layout_width="match_parent"
+            p1:layout_height="67.0dp"
+            p1:id="@+id/button2"
+            p1:background="#F2EE00"
+            p1:textColor="#000"
+            p1:textSize="20dp" />
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="App7.App7" android:versionCode="1" android:versionName="1.0" android:installLocation="auto">
+	<uses-sdk />
+	<application android:debuggable="false" android:label="KiedyTest" android:theme="@android:style/Theme.Material.Light" android:icon="@drawable/Icon">
+    
+	<uses-permission android:name="android.permission.INTERNET" />
+
+
+
+  </application>
+	<service android:name="App7.SimpleService" />
+</manifest>
