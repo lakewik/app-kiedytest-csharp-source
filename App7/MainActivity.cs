@@ -20,34 +20,14 @@ using static Android.Resource;
 
 namespace SimpleService
 {
-
-
-    
-
-
     [Activity(Label = "Zaloguj się do systemu - KiedyTest", MainLauncher = true)]
     [Service]
-
-  
-
     public class MainActivity : Activity
     {
         //int count = 1;
         string data, auth_result;
         int auth_result_int;
         bool google_network_ok;
-
-        /// network check functions ///
-
-      //  ConnectivityManager connectivityManager = (ConnectivityManager)GetSystemService(ConnectivityService);
-
-       // NetworkInfo activeConnection = ConnectivityManager.ActiveNetworkInfo;
-       // bool isOnline = (activeConnection != null) && activeConnection.IsConnected;
-
-        ///////////////////////////////
-
-
-        // Function called from OnDestroy
         protected void saveset()
         {
 
@@ -68,10 +48,7 @@ namespace SimpleService
 
             //Show a toast
             RunOnUiThread(() => Toast.MakeText(this, user_login, ToastLength.Long).Show());
-
         }
-
-
         private bool isMyServiceRunning(System.Type cls)
         {
             ActivityManager manager = (ActivityManager)GetSystemService(Context.ActivityService);
@@ -85,12 +62,8 @@ namespace SimpleService
             }
             return false;
         }
-
-
         protected override void OnCreate(Bundle bundle)
         {
-
-           
             base.OnCreate(bundle);
 
             // Set our view from the "main" layout resource
@@ -141,12 +114,6 @@ namespace SimpleService
             {
                 google_network_ok = false;
             }
-
-          //  if (google_network_ok)
-
-            /////////////////////////////////////////////////////////////
-
-            /////////////////////////////
             //store data
             var prefs = Application.Context.GetSharedPreferences("KiedyTest", FileCreationMode.Private);
 
@@ -160,11 +127,6 @@ namespace SimpleService
                 prefEditor.PutInt("connection_timeout", 3000);
                 prefEditor.PutString("heartbeat_enabled", "yes");
                 prefEditor.PutString("notify_enabled", "yes");
-                
-
-
-
-
                 prefEditor.Commit();
 
             }
@@ -172,30 +134,9 @@ namespace SimpleService
             if (logged == "yes")
             {
                 var activity2 = new Intent(this, typeof(Activity2));
-               // var mainactivity = new Intent(this, typeof(MainActivity));
-                //    activity2.PutExtra("MyData", "Data from Activity1");
              StartActivity(activity2); ///  start menu activity
-                //    FinishActivity(mainactivity); ///  close main activity
-            //   Finish();
-
             }
-
-
             Button start = FindViewById<Button>(Resource.Id.MyButton);
-           // start.Click += (sender, args) => { StartService(new Intent(this, typeof(SimpleService))); };
-
-          //  Uri address = new Uri("http://dziennik.zs1debica.pl/activity/heartbeat");
-        //    NameValueCollection nameValueCollection = new NameValueCollection();
-          //  nameValueCollection["Name"] = "string-input";
-
-         //   var webClient = new WebClient();
-          //  webClient.se
-        //    webClient.UploadValuesAsync(address, "POST", nameValueCollection);
-
-
-          //  saveset();
-         //   retrieveset();
-
             start.Click += delegate {
                 /// LOGIN ACTION///
                 // Request ///
@@ -209,10 +150,6 @@ namespace SimpleService
                     var et2 = FindViewById<EditText>(Resource.Id.editText2);
                     var user_password = et2.Text;
                     string urlAddress = "http://dziennik.zs1debica.pl/kiedytest/android/request_handler/login_app.php?user_name="+user_name+"&user_password="+user_password;
-
-
-
-
                     try
                     {
                         HttpWebRequest request = (HttpWebRequest)WebRequest.Create(urlAddress);
@@ -262,12 +199,8 @@ namespace SimpleService
 
                         foreach (XmlElement x in doc.SelectNodes("result/result_data/auth_result"))
                         {
-
                             auth_result = x.InnerXml;
-                         //   Log.Debug("Tag", auth_result);
-                            //Log.Debug(TAG, auth_result);
-                            // Console.Write(x.InnerXml);
-                            //    noti_type = "pies2";
+
                         }
                         /////////////////////////////////////////////////////////////////////////////////
                         /// Converting variables//////////////////
@@ -287,8 +220,6 @@ namespace SimpleService
                             builder3.Show();
                             var activity2 = new Intent(this, typeof(Activity2));
                             StartActivity(activity2); ///  start menu activity
-                          
-
 
                         }
                         else
@@ -310,40 +241,7 @@ namespace SimpleService
                     builder3.Show();
                 }
 
-                //////////////////////////////////////////////
-                //   this.StartService(new Intent(this, typeof(SimpleServiceBinder)));
-
-                // Intent intent2 = new Intent(ApplicationContext, typeof(SimpleService));
-                //    PendingIntent pi = PendingIntent.GetBroadcast(ApplicationContext, 0, intent2, 0);
-                //  StartService(intent2);
-                //   Service.startForeground(int, Notification)
-                // StartService(new Intent("App7.SimpleService"));
-
-
-                ///////////////////////////////////
-
-               
-
-                //   isMyServiceRunning(System.Type cls)
-                //isMyServiceRunning(SimpleService);
-                ;
-              //  context.ApplicationContext.StartService(new Intent(context, typeof(SimpleService.SimpleServiceBinder)));
-                //   var activity2 = new Intent(this, typeof(Activity2));
-                //    activity2.PutExtra("MyData", "Data from Activity1");
-                //    StartActivity(activity2);
             };
-
-
-            //// starting main app service for notifications ///
-
-        
-
-            //    var notificationIntent = new Intent(this, typeof(SimpleService));
-            //  StartService(notificationIntent);
-            //   startService(new Intent(this, SimpleService));
-
-            //  Button stop = FindViewById<Button>(Resource.Id.stopService);
-            //  stop.Click += (sender, args) => { StopService(new Intent(this, typeof(SimpleService))); };
 
         }
         private void OkAction(object sender, DialogClickEventArgs e)
