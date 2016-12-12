@@ -13,8 +13,8 @@ using Android.Widget;
 namespace App7
 {
 
-    //// panel menu g³ównego
-    [Activity(Theme = "@android:style/Theme.Material.Light", Label = "KiedyTest - menu g³ówne")]
+    //// panel menu gÂ³Ã³wnego
+    [Activity(Theme = "@android:style/Theme.Material.Light", Label = "KiedyTest - menu gÂ³Ã³wne")]
     
     public class Activity2 : Activity
     {
@@ -36,33 +36,25 @@ namespace App7
                 activity2.PutExtra("display_type", "dzisiaj");
                 StartActivity(activity2);
             };
-
-
             jutro.Click += delegate {
                 var activity2 = new Intent(this, typeof(Activity1));
                 activity2.PutExtra("display_type", "jutro");
                 StartActivity(activity2);
             };
-
             pojutrze.Click += delegate {
                 var activity2 = new Intent(this, typeof(Activity1));
                 activity2.PutExtra("display_type", "pojutrze");
                 StartActivity(activity2);
             };
-
-
             all.Click += delegate {
                 var activity2 = new Intent(this, typeof(Activity1));
                 activity2.PutExtra("display_type", "all");
                 StartActivity(activity2);
             };
-
-
             settings.Click += delegate {
                 var activity3 = new Intent(this, typeof(Activity3));
                 StartActivity(activity3);
             };
-
             // Create your application here
         }
     }
