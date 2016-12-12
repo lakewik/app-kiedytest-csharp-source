@@ -20,9 +20,7 @@ namespace App7
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.settings_layout);
-
             Button save = FindViewById<Button>(Resource.Id.button2);
-
             save.Click += delegate
             {
                 var prefs = Application.Context.GetSharedPreferences("KiedyTest", FileCreationMode.Private);
@@ -36,20 +34,15 @@ namespace App7
                     } else
                 {
                     prefEditor.PutString("heartbeat_enabled", "no");
-
                 }
-
                 if (notify.Checked)
                 {
-
                     prefEditor.PutString("notify_enabled", "yes");
                 }
                 else
                 {
                     prefEditor.PutString("notify_enabled", "no");
-
                 }
-
                 /// Checking timeout
                 /// 
                 bool check_ok;
@@ -57,10 +50,8 @@ namespace App7
                 {
                     check_ok = false;
                     var builder2 = new AlertDialog.Builder(this);
-                    builder2.SetMessage("Czas oczekiwania na odpowiedŸ (timeout) nie mo¿e byæ mniejszy ni¿ 3000! Proszê wprowadziæ wartoœæ wiêksz¹ lub równ¹ 3000!");
-              //      builder2.SetPositiveButton("OK", OkAction);
+                    builder2.SetMessage("Czas oczekiwania na odpowiedÅ¸ (timeout) nie moÂ¿e byÃ¦ mniejszy niÂ¿ 3000! ProszÃª wprowadziÃ¦ wartoÅ“Ã¦ wiÃªkszÂ¹ lub rÃ³wnÂ¹ 3000!");
                     builder2.Show();
-                  
                 } else
                 {
                     check_ok = true;
@@ -72,13 +63,11 @@ namespace App7
                 if (check_ok == true)
                 {
                     var builder2 = new AlertDialog.Builder(this);
-                    builder2.SetMessage("Ustawiania zosta³y zapisane pomyœlnie!");
-                  //  builder2.SetPositiveButton("OK", OkAction);
+                    builder2.SetMessage("Ustawiania zostaÂ³y zapisane pomyÅ“lnie!");
                     builder2.Show();
                 }
 
             };
-                // Create your application here
          }
 
         private void OkAction(object sender, DialogClickEventArgs e)
